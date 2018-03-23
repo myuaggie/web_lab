@@ -10,3 +10,17 @@ Update time:2018/3/19
 #### to do ####
  * Sort
 
+## version 2 ##
+Update time:2018/3/23
+#### feature ####
+* Question Table
+    * Filter
+    * Sort
+* Nav
+
+#### to do ####
+* user info
+    * register
+    * log in
+    * log out
+* question detail browser
