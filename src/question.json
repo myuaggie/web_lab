@@ -5,30 +5,37 @@
   { "name": "q1",
     "tag": ["t1","t2"],
     "frequent": 0,
-    "date":"2018/3/19"},
+    "date":"2018/3/19",
+    "key":"k1"},
 
   { "name": "q2",
     "tag": ["t1","t2"],
     "frequent": 0,
-    "date":"2018/3/19"},
+    "date":"2018/3/19",
+    "key":"k2"},
 
   { "name": "q3",
     "tag": ["t1","t2"],
     "frequent": 0,
-    "date":"2018/3/19"},
+    "date":"2018/3/19",
+    "key":"k3"},
 
   { "name": "q4",
     "tag": ["t1","t2"],
     "frequent": 0,
-    "date":"2018/3/19"},
+    "date":"2018/3/19",
+    "key":"k4"},
 
   { "name": "q5",
     "tag": ["t1","t2"],
     "frequent": 0,
-    "date":"2018/3/19"},
+    "date":"2018/3/19",
+    "key":"k5"},
 
   { "name": "q6",
     "tag": ["t1","t2"],
     "frequent": 0,
-    "date":"2018/3/19"}]
+    "date":"2018/3/19",
+    "key":"k6"}],
+  "filter":[true,true,true,true,true,true]
 }
