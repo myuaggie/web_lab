@@ -6,48 +6,72 @@
     "tag": ["t1","t2"],
     "frequent": 0,
     "date":"2018/3/19",
+<<<<<<< HEAD
     "key":"k1",
     "content":"k1 content"
   },
+=======
+    "key":"k1"},
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 
   { "name": "q2",
     "tag": ["t1","t2"],
     "frequent": 0,
     "date":"2018/3/19",
+<<<<<<< HEAD
     "key":"k2",
     "content":"k2 content"
   },
+=======
+    "key":"k2"},
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 
   { "name": "q3",
     "tag": ["t1","t2"],
     "frequent": 0,
     "date":"2018/3/19",
+<<<<<<< HEAD
     "key":"k3",
     "content":"k3 content"
   },
+=======
+    "key":"k3"},
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 
   { "name": "q4",
     "tag": ["t1","t2"],
     "frequent": 0,
     "date":"2018/3/19",
+<<<<<<< HEAD
     "key":"k4",
     "content":"k4 content"
   },
+=======
+    "key":"k4"},
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 
   { "name": "q5",
     "tag": ["t1","t2"],
     "frequent": 0,
     "date":"2018/3/19",
+<<<<<<< HEAD
     "key":"k5",
     "content":"k5 content"
   },
+=======
+    "key":"k5"},
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 
   { "name": "q6",
     "tag": ["t1","t2"],
     "frequent": 0,
     "date":"2018/3/19",
+<<<<<<< HEAD
     "key":"k6",
     "content":"k6 content"
   }],
+=======
+    "key":"k6"}],
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
   "filter":[true,true,true,true,true,true]
 }

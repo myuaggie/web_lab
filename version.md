@@ -23,6 +23,7 @@ Update time:2018/3/23
     * register
     * log in
     * log out
+<<<<<<< HEAD
 * question detail browser
 
 ## version 3 ##
@@ -40,3 +41,6 @@ Update time:2018/3/24
     * log out
 * question detail browser
     * answer history
+=======
+* question detail browser
+>>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
