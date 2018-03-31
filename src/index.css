@@ -9,3 +9,32 @@ body {
   color:gray;
 }
 
+
+
+#welcomePage{
+  vertical-align: top;
+  margin-top:20px;
+  height:630px
+
+}
+
+#title{
+  text-align:center;
+  margin-left: 85px;
+  font-size:2.5em;
+  color: #152578;
+}
+
+#intro{
+  text-align:center;
+  margin-left: 85px;
+  color:  #152578;
+}
+
+#footer{
+  margin-top: 250px;
+  margin-left: 570px;
+  color: #152578;
+  font-size: 1.2em;
+}
+

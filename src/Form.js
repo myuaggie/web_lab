@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
 
 import {Table} from 'react-bootstrap';
-<<<<<<< HEAD
 import {Form,FormGroup,FormControl,InputGroup,ControlLabel} from 'react-bootstrap'
-=======
-import {FormGroup,FormControl,InputGroup} from 'react-bootstrap'
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 import {Label} from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import {Grid,Row,Col} from 'react-bootstrap'
 //import App from "./App";
 import constantData from './question.json'
-<<<<<<< HEAD
 import { Redirect } from 'react-router-dom';
 import {Modal} from 'react-bootstrap';
 
-=======
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
 
-let arr=[];
 
+//表格里的单元格（可修改）
 class Cell extends React.Component{
     constructor(prop){
         super(prop);
@@ -29,10 +22,6 @@ class Cell extends React.Component{
         };
         this.changeState=this.changeState.bind(this);
         this.changeContent=this.changeContent.bind(this);
-<<<<<<< HEAD
-=======
-       // this.changeInput=this.changeInput.bind(this);
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
         this.changeIputBlur=this.changeIputBlur.bind(this);
     }
 
@@ -50,14 +39,6 @@ class Cell extends React.Component{
         });
     }
 
-<<<<<<< HEAD
-=======
-   /* changeInput(e){
-        //alert(e.keyCode);
-        e.keyCode==='13' && this.changeIputBlur();
-    }
-*/
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
     changeIputBlur(){
         this.setState({
             input:false
@@ -88,6 +69,7 @@ class Cell extends React.Component{
     }
 }
 
+//单个标签（可修改）
 class Tag extends React.Component{
    constructor(prop){
        super(prop);
@@ -133,7 +115,7 @@ class Tag extends React.Component{
    }
 }
 
-
+//标签组
 class TagGroup extends React.Component{
     constructor(prop){
         super(prop);
@@ -159,18 +141,14 @@ class TagGroup extends React.Component{
     }
 }
 
+//表格中的元组（即一条错题信息）
 class Tuple extends React.Component{
     constructor(prop){
         super(prop);
-<<<<<<< HEAD
         this.state={redirect:false};
         this.deleteTuple=this.deleteTuple.bind(this);
         this.modifyTuple=this.modifyTuple.bind(this);
         this.handleClick=this.handleClick.bind(this);
-=======
-        this.deleteTuple=this.deleteTuple.bind(this);
-        this.modifyTuple=this.modifyTuple.bind(this);
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
     }
 
     deleteTuple(){
@@ -179,7 +157,6 @@ class Tuple extends React.Component{
     modifyTuple(stateName,stateC){
         this.props.modify(this.props.seq,stateName,stateC);
     }
-<<<<<<< HEAD
     handleClick(){
         this.setState({redirect:true});
     }
@@ -205,26 +182,10 @@ class Tuple extends React.Component{
             }
             else return (<p></p>)
         }
-=======
-    render(){
-        if (this.props.show){
-        return(
-            <tr>
-                <td>{this.props.seq}</td>
-                <Cell cg="name" str={this.props.name} modify={this.modifyTuple}/>
-                <Cell cg="frequency" str={this.props.frequency} modify={this.modifyTuple}/>
-                <Cell cg="date" str={this.props.date} modify={this.modifyTuple}/>
-                <TagGroup tag={this.props.tag} modify={this.modifyTuple}/>
-                <Button bsStyle="danger" onClick={this.deleteTuple}>-</Button>
-            </tr>
-        )
-        }
-        else return(<p></p>)
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
     }
 }
 
-
+//3种排序状态
 class SortTable extends React.Component{
     constructor(prop){
         super(prop);
@@ -245,6 +206,7 @@ class SortTable extends React.Component{
     }
 }
 
+//用于排序的函数
 function cmpNameDown(a,b){
     if (b["name"] === a["name"]) return 0;
     else if (b["name"] > a["name"]) return 1;
@@ -277,7 +239,8 @@ function cmpDateUp(a,b){
     else return -1;
 }
 
-<<<<<<< HEAD
+
+//增加错题的表单
 class CreateForm extends React.Component{
     constructor(prop){
         super(prop);
@@ -340,6 +303,7 @@ class CreateForm extends React.Component{
     }
 }
 
+//增加错题时的弹出框
 class CreateNew extends React.Component{
     constructor(prop){
         super(prop);
@@ -383,21 +347,15 @@ class CreateNew extends React.Component{
     }
 }
 
-
-=======
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
+//错题目录表格
 class MainTable extends React.Component{
     constructor(prop){
         super(prop);
         this.state={
             question:constantData.question,
             filter:constantData.filter,
-<<<<<<< HEAD
             keyword:"",
             create:false
-=======
-            keyword:""
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
         };
         this.count=6;
         this.modifyState=this.modifyState.bind(this);
@@ -406,19 +364,15 @@ class MainTable extends React.Component{
         this.changeContent=this.changeContent.bind(this);
         this.searchFilter=this.searchFilter.bind(this);
         this.sortf=this.sortf.bind(this);
-<<<<<<< HEAD
         this.setCreate=this.setCreate.bind(this);
         this.updateLocal=this.updateLocal.bind(this);
-=======
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
     }
     modifyState(index,stateName,stateC){
         let temp=this.state.question;
         temp[index-1][stateName]=stateC;
-        this.setState({question:temp});
+        this.setState({question:temp,create:false});
     }
 
-<<<<<<< HEAD
     updateLocal(key){
         let question=this.state.question;
         let content="";
@@ -448,16 +402,6 @@ class MainTable extends React.Component{
             "date":new Date().toLocaleDateString(),
         "key":"k"+this.count.toString(),
         "content":content});
-=======
-    addTuple(){
-        this.count++;
-        let temp=this.state.question;
-        temp.push({ "name": "q",
-            "tag": ["t","t"],
-            "frequent": 0,
-            "date":" ",
-        "key":"k"+this.count.toString()});
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
         let filter=this.state.filter;
         filter.push(true);
         this.setState({question:temp,filter:filter});
@@ -468,11 +412,7 @@ class MainTable extends React.Component{
 
         temp.splice(index,1);
         //delete temp[index];
-<<<<<<< HEAD
         this.setState({question:temp,create:false});
-=======
-        this.setState({question:temp});
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
     }
 
     searchFilter(v){
@@ -511,13 +451,13 @@ class MainTable extends React.Component{
         if (title === "name"){
             if (mode === 1){
                 temp.sort(cmpNameUp);
-                this.setState({question:temp});
+                this.setState({question:temp,create:false});
                 this.searchFilter("");
                 return;
             }
             else if (mode === 2){
                 temp.sort(cmpNameDown);
-                this.setState({question:temp});
+                this.setState({question:temp,create:false});
                 this.searchFilter("");
                 return;
             }
@@ -525,13 +465,13 @@ class MainTable extends React.Component{
         else if (title === "frequency"){
             if (mode === 1){
                 temp.sort(cmpFreUp);
-                this.setState({question:temp});
+                this.setState({question:temp,create:false});
                 this.searchFilter("");
                 return;
             }
             else if (mode === 2){
                 temp.sort(cmpFreDown);
-                this.setState({question:temp});
+                this.setState({question:temp,create:false});
                 this.searchFilter("");
                 return;
             }
@@ -539,13 +479,13 @@ class MainTable extends React.Component{
         else if (title === "date"){
             if (mode === 1){
                 temp.sort(cmpDateUp);
-                this.setState({question:temp});
+                this.setState({question:temp,create:false});
                 this.searchFilter("");
                 return;
             }
             else if (mode === 2){
                 temp.sort(cmpDateDown);
-                this.setState({question:temp});
+                this.setState({question:temp,create:false});
                 this.searchFilter("");
                 return;
             }
@@ -553,18 +493,10 @@ class MainTable extends React.Component{
     }
     render(){
         let list=this.state.question.map((item,i) => (
-<<<<<<< HEAD
             <Tuple key={item.key} keys={item.key} content={item.content} seq={i+1} name={item.name} tag={item.tag} frequency={item.frequent} date={item.date}
                    modify={this.modifyState} delete={this.deleteState} show={this.state.filter[i]} update={this.updateLocal}/>
 
         ));
-=======
-            <Tuple key={item.key} seq={i+1} name={item.name} tag={item.tag} frequency={item.frequent} date={item.date}
-                   modify={this.modifyState} delete={this.deleteState} show={this.state.filter[i]}/>
-
-        ));
-
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
         return(
             <Grid>
                 <Row>
@@ -593,16 +525,10 @@ class MainTable extends React.Component{
                             <tbody>
                             {list}
                             </tbody>
-<<<<<<< HEAD
                             <Button bsStyle="success" onClick={this.setCreate}>+</Button>
                         </Table>
                 </Row>
                 <Row><CreateNew show={this.state.create} create={this.addTuple}/></Row>
-=======
-                            <Button bsStyle="success" onClick={this.addTuple}>+</Button>
-                        </Table>
-                </Row>
->>>>>>> 61e6e9bebe51b3997ec59830e4e10ff772b8a270
             </Grid>
         );
     }
